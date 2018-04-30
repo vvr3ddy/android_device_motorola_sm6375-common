@@ -76,3 +76,6 @@ TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
+
+# Verified Boot
+BOARD_AVB_ENABLE := true
