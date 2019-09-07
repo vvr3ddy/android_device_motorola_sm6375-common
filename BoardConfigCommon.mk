@@ -79,3 +79,4 @@ BOARD_USES_QCOM_HARDWARE := true
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
+BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
