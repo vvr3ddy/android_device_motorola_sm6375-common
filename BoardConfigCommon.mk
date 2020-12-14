@@ -25,7 +25,9 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := kryo385
 TARGET_NO_BOOTLOADER := true
 
 # Filesystem
-TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
+TARGET_FS_CONFIG_GEN := \
+    $(COMMON_PATH)/config.fs \
+    $(COMMON_PATH)/mot_aids.fs
 
 # Kernel
 BOARD_BOOT_HEADER_VERSION := 3
