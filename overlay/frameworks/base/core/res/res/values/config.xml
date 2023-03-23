@@ -221,4 +221,9 @@
         <item>/system/lib64/libsurfaceflinger.so</item>
     </string-array>
 
+    <!-- When true use the linux /dev/input/event subsystem to detect the switch changes
+    on the headphone/microphone jack. When false use the older uevent framework -->
+    <bool name="config_useDevInputEventForAudioJack">true</bool>
+
 </resources>
+
