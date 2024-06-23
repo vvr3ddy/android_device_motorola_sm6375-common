@@ -288,6 +288,10 @@ PRODUCT_PACKAGES += \
     libstagefright_softomx.vendor \
     libstagefright_softomx_plugin.vendor
 
+# OEM
+PRODUCT_PACKAGES += \
+    bin_expat_symlink
+
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
