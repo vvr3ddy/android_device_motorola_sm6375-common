@@ -69,6 +69,7 @@ PRODUCT_PACKAGES += \
     audio.primary.holi \
     audio.r_submix.default \
     audio.usb.default \
+    firmware_aw_cali.bin_symlink \
     libaudiopreprocessing \
     libaudioroute \
     libbatterylistener \
