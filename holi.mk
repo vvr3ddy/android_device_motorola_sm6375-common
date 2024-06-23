@@ -352,6 +352,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt \
     $(LOCAL_PATH)/configs/public.libraries-qti.system-ext.txt:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/public.libraries-qti.txt
 
+# RFS MSM MPSS symlinks
+PRODUCT_PACKAGES += \
+    rfs_msm_mpss_readonly_vendor_fsg_symlink
+
 # RIL
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.5.vendor \
