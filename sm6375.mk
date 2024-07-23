@@ -46,6 +46,10 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.1-impl-qti.recovery \
     android.hardware.boot@1.1-service
 
+# Filesystem
+PRODUCT_PACKAGES += \
+    fs_config_files
+
 # Partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
@@ -113,7 +117,7 @@ PRODUCT_PACKAGES += \
     init.qti.kernel.rc \
     init.target.rc \
     init.recovery.qcom.rc \
-    
+
 # Shipping API level
 BOARD_SHIPPING_API_LEVEL := 34
 PRODUCT_SHIPPING_API_LEVEL := 34
