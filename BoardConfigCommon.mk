@@ -39,7 +39,6 @@ BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 TARGET_KERNEL_CONFIG := vendor/holi-qgki_defconfig
 TARGET_KERNEL_SOURCE := kernel/motorola/sm6375
-
 # Kernel - Prebuilt
 include device/motorola/sm6375-kernel/prebuilt_kernel.mk
 
