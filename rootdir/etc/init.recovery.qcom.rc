@@ -27,6 +27,17 @@
 
 import /init.recovery.usb.rc
 
+on early-init
+    insmod /lib/modules/mmi_annotate.ko
+    insmod /lib/modules/mmi_info.ko
+    insmod /lib/modules/utags.ko
+    insmod /lib/modules/sensors_class.ko
+    insmod /lib/modules/watchdogtest.ko
+    insmod /lib/modules/qpnp_adaptive_charge.ko
+    insmod /lib/modules/moto_f_usbnet.ko
+    insmod /lib/modules/mmi-smbcharger-iio.ko
+    insmod /lib/modules/ilitek_v3_mmi.ko
+
 on init
     write /sys/class/backlight/panel0-backlight/brightness 200
     setprop sys.usb.configfs 1
