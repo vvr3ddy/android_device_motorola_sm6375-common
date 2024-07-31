@@ -20,8 +20,12 @@ AB_OTA_PARTITIONS += \
     system_ext \
     vbmeta \
     vbmeta_system \
-    vendor \
+    vendor
+
+ifneq ($(TARGET_NOT_USE_VENDOR_BOOT),true)
+AB_OTA_PARTITIONS += \
     vendor_boot
+endif
 
 PRODUCT_PACKAGES += \
     update_engine \
@@ -56,6 +60,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
 
+# Fastbootd
+PRODUCT_PACKAGES += \
+    fastbootd
+
 # Partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
@@ -75,3 +83,8 @@ PRODUCT_SOONG_NAMESPACES += \
 # Vendor ramdisk
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.qcom_ramdisk:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
+
+ifeq ($(TARGET_NOT_USE_VENDOR_BOOT),true)
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/first_stage_ramdisk/fstab.qcom
+endif
