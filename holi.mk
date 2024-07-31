@@ -71,7 +71,62 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Rootdir
 PRODUCT_PACKAGES += \
-    init.recovery.qcom.rc
+    hardware_revisions.sh \
+    init.class_main.sh \
+    init.crda.sh \
+    init.gbmods.sh \
+    init.kernel.post_boot-blair.sh \
+    init.kernel.post_boot-holi.sh \
+    init.kernel.post_boot.sh \
+    init.mdm.sh \
+    init.mmi.block_perm.sh \
+    init.mmi.boot.sh \
+    init.mmi.mdlog-getlogs.sh \
+    init.mmi.modules.sh \
+    init.mmi.shutdown.sh \
+    init.mmi.touch.sh \
+    init.mmi.usb.sh \
+    init.mmi.wlan-getlogs.sh \
+    init.oem.fingerprint2.sh \
+    init.oem.hw.sh \
+    init.qcom.class_core.sh \
+    init.qcom.coex.sh \
+    init.qcom.early_boot.sh \
+    init.qcom.efs.sync.sh \
+    init.qcom.post_boot.sh \
+    init.qcom.sdio.sh \
+    init.qcom.sensors.sh \
+    init.qcom.sh \
+    init.qcom.usb.sh \
+    init.qti.chg_policy.sh \
+    init.qti.display_boot.sh \
+    init.qti.early_init.sh \
+    init.qti.kernel.debug-blair.sh \
+    init.qti.kernel.debug-holi.sh \
+    init.qti.kernel.debug.sh \
+    init.qti.kernel.sh \
+    init.qti.media.sh \
+    init.qti.qcv.sh \
+    fstab.qcom \
+    fstab.qcom_ramdisk \
+    init.mmi.charge_only.rc \
+    init.mmi.chipset.rc \
+    init.mmi.debug.rc \
+    init.mmi.diag_mdlog.rc \
+    init.mmi.diag.rc \
+    init.mmi.overlay.rc \
+    init.mmi.rc \
+    init.mmi.tcmd.rc \
+    init.mmi.usb.rc \
+    init.mmi.wlan.rc \
+    init.qcom.factory.rc \
+    init.qcom.rc \
+    init.qcom.usb.rc \
+    init.qti.kernel.rc \
+    init.recovery.qcom.rc \
+    init.recovery.usb.rc \
+    init.target.rc \
+    ueventd.qcom.rc
 
 # Screen
 TARGET_SCREEN_DENSITY := 260
