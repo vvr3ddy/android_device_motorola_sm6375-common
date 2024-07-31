@@ -105,6 +105,9 @@ TARGET_RECOVERY_DEVICE_DIRS += $(COMMON_PATH)
 TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab.qcom
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 
+# Security patch level
+VENDOR_SECURITY_PATCH := 2024-06-01
+
 # Sepolicy
 include device/qcom/sepolicy_vndr/SEPolicy.mk
 
@@ -120,3 +123,6 @@ BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX_LOCATION := 1s
 # Verified Boot
 BOARD_AVB_ENABLE := true
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
+
+# Inherit from the proprietary version
+include vendor/motorola/sm6375-common/BoardConfigVendor.mk

@@ -155,3 +155,7 @@ ifeq ($(TARGET_NOT_USE_VENDOR_BOOT),true)
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/first_stage_ramdisk/fstab.qcom
 endif
+
+# Get non-open-source specific aspects
+$(call inherit-product, vendor/motorola/sm6375-common/sm6375-common-vendor.mk)
+
