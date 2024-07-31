@@ -43,7 +43,8 @@ PRODUCT_PACKAGES += \
 
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREF_CONFIG := xhdpi
+PRODUCT_AAPT_PREF_CONFIG := 280dpi
+PRODUCT_AAPT_PREBUILT_DPI := xxxhdpi xxhdpi xhdpi hdpi
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1600
@@ -71,6 +72,9 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 # Rootdir
 PRODUCT_PACKAGES += \
     init.recovery.qcom.rc
+
+# Screen
+TARGET_SCREEN_DENSITY := 260
 
 # Shipping API level
 BOARD_SHIPPING_API_LEVEL := 30
