@@ -69,6 +69,29 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fs_config_files
 
+# Media
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
+    $(LOCAL_PATH)/media/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml \
+    $(LOCAL_PATH)/media/media_codecs_performance_v1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_v1.xml \
+    $(LOCAL_PATH)/media/media_blair/video_system_specs.json:$(TARGET_COPY_OUT_VENDOR)/etc/video_system_specs_blair.json \
+    $(LOCAL_PATH)/media/media_blair_lite/video_system_specs.json:$(TARGET_COPY_OUT_VENDOR)/etc/video_system_specs_blair_lite.json \
+    $(LOCAL_PATH)/media/media_codecs_blair.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_blair.xml \
+    $(LOCAL_PATH)/media/media_codecs_blair_lite.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_blair_lite.xml \
+    $(LOCAL_PATH)/media/media_codecs_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2.xml \
+    $(LOCAL_PATH)/media/media_codecs_dolby_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_dolby_audio.xml \
+    $(LOCAL_PATH)/media/media_codecs_holi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_holi.xml \
+    $(LOCAL_PATH)/media/media_codecs_performance_blair.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_blair.xml \
+    $(LOCAL_PATH)/media/media_codecs_performance_blair_lite.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_blair_lite.xml \
+    $(LOCAL_PATH)/media/media_codecs_performance_holi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_holi.xml \
+    $(LOCAL_PATH)/media/media_holi/video_system_specs.json:$(TARGET_COPY_OUT_VENDOR)/etc/video_system_specs_holi.json \
+    $(LOCAL_PATH)/media/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles.xml \
+    $(LOCAL_PATH)/media/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml \
+    $(LOCAL_PATH)/media/media_profiles_blair.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_blair.xml \
+    $(LOCAL_PATH)/media/media_profiles_blair_lite.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_blair_lite.xml \
+    $(LOCAL_PATH)/media/media_profiles_holi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_holi.xml \
+    $(LOCAL_PATH)/media/media_profiles_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_vendor.xml
+
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
