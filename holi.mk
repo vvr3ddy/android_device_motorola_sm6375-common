@@ -372,6 +372,11 @@ PRODUCT_PACKAGES += \
 # Screen
 TARGET_SCREEN_DENSITY := 260
 
+# Sensors
+PRODUCT_PACKAGES += \
+    android.hardware.sensors@2.0-service.multihal \
+    libsensorndkbridge
+
 # Shipping API level
 BOARD_SHIPPING_API_LEVEL := 30
 PRODUCT_SHIPPING_API_LEVEL := 31
