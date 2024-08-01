@@ -96,14 +96,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.btconfigstore@1.0.vendor \
     vendor.qti.hardware.btconfigstore@2.0.vendor
 
-# Camera
-PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.4-impl \
-    android.hardware.camera.provider@2.4-service_64 \
-    libcamera2ndk_vendor \
-    libgui_vendor \
-    vendor.qti.hardware.camera.postproc@1.0.vendor
-
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1600
 TARGET_SCREEN_WIDTH := 720
@@ -118,6 +110,44 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
+
+# Camera
+PRODUCT_PACKAGES += \
+    android.hardware.camera.provider@2.4-impl \
+    android.hardware.camera.provider@2.4-service_64 \
+    libcamera2ndk_vendor \
+    libgui_vendor \
+    vendor.qti.hardware.camera.postproc@1.0.vendor
+
+# Display
+PRODUCT_PACKAGES += \
+    android.hardware.graphics.common-V1-ndk_platform.vendor \
+    android.hardware.graphics.mapper@3.0-impl-qti-display \
+    android.hardware.graphics.mapper@4.0-impl-qti-display \
+    android.hardware.memtrack@1.0-impl \
+    android.hardware.memtrack@1.0-service \
+    init.qti.display_boot.sh \
+    libdisplayconfig.qti \
+    libdisplayconfig.system.qti \
+    libmemutils \
+    libqdMetaData \
+    libsdmcore \
+    libsdmutils \
+    libtinyxml \
+    memtrack.default \
+    vendor.display.config@1.15.vendor \
+    vendor.display.config@2.0 \
+    vendor.display.config@2.0.vendor \
+    vendor.qti.hardware.display.allocator-service \
+    vendor.qti.hardware.display.composer-service \
+    vendor.qti.hardware.display.mapper@1.1.vendor \
+    vendor.qti.hardware.display.mapper@2.0.vendor \
+    vendor.qti.hardware.display.mapper@3.0.vendor \
+    vendor.qti.hardware.display.mapper@4.0.vendor \
+    vendor.qti.hardware.display.mapperextensions@1.0.vendor \
+    vendor.qti.hardware.display.mapperextensions@1.1.vendor \
+    vendor.qti.hardware.display.mapperextensions@1.2.vendor \
+    vendor.qti.hardware.display.mapperextensions@1.3.vendor
 
 # Fastbootd
 PRODUCT_PACKAGES += \
