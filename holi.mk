@@ -336,17 +336,14 @@ PRODUCT_PACKAGES += \
     init.qcom.efs.sync.sh \
     init.qcom.post_boot.sh \
     init.qcom.sdio.sh \
-    init.qcom.sensors.sh \
     init.qcom.sh \
     init.qcom.usb.sh \
     init.qti.chg_policy.sh \
-    init.qti.display_boot.sh \
     init.qti.early_init.sh \
     init.qti.kernel.debug-blair.sh \
     init.qti.kernel.debug-holi.sh \
     init.qti.kernel.debug.sh \
     init.qti.kernel.sh \
-    init.qti.media.sh \
     init.qti.qcv.sh \
     fstab.qcom \
     fstab.qcom_ramdisk \
