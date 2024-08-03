@@ -87,6 +87,7 @@ BOARD_KERNEL_CMDLINE += swiotlb=0 loop.max_part=7 cgroup.memory=nokmem,nosocket
 BOARD_KERNEL_CMDLINE += pcie_ports=compat loop.max_part=7 iptable_raw.raw_before_defrag=1
 BOARD_KERNEL_CMDLINE += ip6table_raw.raw_before_defrag=1 androidboot.hab.csv=7
 BOARD_KERNEL_CMDLINE += androidboot.hab.cid=50
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_SEPARATED_DTBO := true
@@ -95,6 +96,11 @@ TARGET_KERNEL_SOURCE := kernel/motorola/sm6375
 
 # Kernel - GKI
 OVERRIDE_ENABLE_UFFD_GC := true
+INLINE_KERNEL_BUILDING := true
+
+# Kernel fixes - for LOS
+TARGET_KERNEL_CLANG_COMPILE := true
+TARGET_KERNEL_ADDITIONAL_FLAGS := DTC_EXT=$(shell pwd)/prebuilts/misc/linux-x86/dtc/dtc LLVM=-11 CONFIG_BUILD_ARM64_DT_OVERLAY=y
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
