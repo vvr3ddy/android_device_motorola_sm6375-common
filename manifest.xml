@@ -723,8 +723,5 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         </interface>
         <fqname>@1.0::IQspmhal/default</fqname>
     </hal>
-    <sepolicy>
-        <version>30.0</version>
-    </sepolicy>
     <kernel target-level="5"/>
 </manifest>
