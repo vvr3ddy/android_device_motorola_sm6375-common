@@ -185,12 +185,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1.vendor
 
-# Media
+#  Media
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
     $(LOCAL_PATH)/media/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml \
-    $(LOCAL_PATH)/media/media_codecs_performance_v1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_v1.xml \
-    $(LOCAL_PATH)/media/media_blair/video_system_specs.json:$(TARGET_COPY_OUT_VENDOR)/etc/video_system_specs_blair.json \
+    $(LOCAL_PATH)/media/media_blair/video_system_specs.json:$(TARGET_COPY_OUT_VENDOR)/etc/video_system_specs.json \
     $(LOCAL_PATH)/media/media_blair_lite/video_system_specs.json:$(TARGET_COPY_OUT_VENDOR)/etc/video_system_specs_blair_lite.json \
     $(LOCAL_PATH)/media/media_codecs_blair.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_blair.xml \
     $(LOCAL_PATH)/media/media_codecs_blair_lite.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_blair_lite.xml \
@@ -207,6 +206,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/media/media_profiles_blair_lite.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_blair_lite.xml \
     $(LOCAL_PATH)/media/media_profiles_holi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_holi.xml \
     $(LOCAL_PATH)/media/media_profiles_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_vendor.xml
+
 
 # Media
 PRODUCT_COPY_FILES += \
