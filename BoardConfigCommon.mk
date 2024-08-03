@@ -162,7 +162,7 @@ TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 VENDOR_SECURITY_PATCH := 2024-06-01
 
 # Sepolicy
-include device/qcom/sepolicy_vndr/SEPolicy.mk
+BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
