@@ -136,14 +136,13 @@ $(WIFI_FIRMWARE_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(WIFI_FIRMWARE_SYMLINKS)
 
-CNE_SYMLINKS := $(TARGET_OUT_VENDOR_APPS)/CneApp/lib/arm64/libvndfwk_detect_jni.qti.so
-$(CNE_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
-	@echo "CneApp lib link: $@"
-	@mkdir -p $(dir $@)
-	@rm -rf $@
-	$(hide) ln -sf /vendor/lib64/$(notdir $@) $@
+CNE_APP_SYMLINKS := $(TARGET_OUT_VENDOR)/app/CneApp/lib/arm64
+$(CNE_APP_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@echo "Creating CneApp symlinks: $@"
+	@mkdir -p $@
+	$(hide) ln -sf /vendor/lib64/libvndfwk_detect_jni.qti.so $@/libvndfwk_detect_jni.qti.so
 
-ALL_DEFAULT_INSTALLED_MODULES += $(CNE_SYMLINKS)
+ALL_DEFAULT_INSTALLED_MODULES += $(CNE_APP_SYMLINKS)
 
 EXPAT_SYMLINKS := $(TARGET_OUT_VENDOR_EXECUTABLES)/expat
 $(EXPAT_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
