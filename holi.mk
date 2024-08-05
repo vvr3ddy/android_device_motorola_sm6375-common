@@ -20,12 +20,8 @@ AB_OTA_PARTITIONS += \
     system_ext \
     vbmeta \
     vbmeta_system \
-    vendor
-
-ifneq ($(TARGET_NOT_USE_VENDOR_BOOT),true)
-AB_OTA_PARTITIONS += \
+    vendor \
     vendor_boot
-endif
 
 PRODUCT_PACKAGES += \
     update_engine \
@@ -447,11 +443,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.qcom_ramdisk:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
 
-ifeq ($(TARGET_NOT_USE_VENDOR_BOOT),true)
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/first_stage_ramdisk/fstab.qcom
-endif
-
 # Vendor service manager
 PRODUCT_PACKAGES += \
     vndservicemanager
@@ -488,4 +479,3 @@ PRODUCT_COPY_FILES += \
 
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/motorola/sm6375-common/sm6375-common-vendor.mk)
-
