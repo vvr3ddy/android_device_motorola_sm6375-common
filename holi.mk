@@ -369,12 +369,10 @@ PRODUCT_PACKAGES += \
     init.qti.kernel.sh \
     init.qti.qcv.sh \
     fstab.qcom \
-    fstab.qcom_ramdisk \
     init.mmi.charge_only.rc \
     init.mmi.chipset.rc \
     init.mmi.debug.rc \
     init.mmi.diag_mdlog.rc \
-    init.mmi.diag.rc \
     init.mmi.overlay.rc \
     init.mmi.rc \
     init.mmi.tcmd.rc \
