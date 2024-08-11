@@ -388,7 +388,7 @@ PRODUCT_PACKAGES += \
     ueventd.qcom.rc
 
 # Screen
-TARGET_SCREEN_DENSITY := 260
+TARGET_SCREEN_DENSITY := 280
 
 # Sensors
 PRODUCT_PACKAGES += \
