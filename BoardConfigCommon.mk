@@ -166,6 +166,8 @@ VENDOR_SECURITY_PATCH := 2024-06-01
 
 # Sepolicy
 BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
+include device/qcom/sepolicy_vndr/SEPolicy.mk
+
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
