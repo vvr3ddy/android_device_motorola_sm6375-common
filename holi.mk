@@ -69,30 +69,29 @@ PRODUCT_PACKAGES += \
     audio.primary.holi \
     audio.r_submix.default \
     audio.usb.default \
-    liba2dpoffload \
     libaudiopreprocessing \
+    libaudioroute \
+    libbatterylistener \
     libbundlewrapper \
+    libcirrusspkrprot \
+    libcomprcapture \
     libdownmix \
     libdynproc \
     libeffectproxy \
-    libldnhncr \
-    libqcomvisualizer \
-    libqcomvoiceprocessing \
-    libreverbwrapper \
-    libvisualizer \
-    sound_trigger.primary.holi \
-    libaudioroute \
-    libbatterylistener \
-    libcirrusspkrprot \
-    libcomprcapture \
     libexthwplugin \
     libhdmiedid \
     libhfp \
+    libldnhncr \
     libqcompostprocbundle \
+    libqcomvisualizer \
+    libqcomvoiceprocessing \
+    libreverbwrapper \
     libsndmonitor \
     libspkrprot \
     libtinycompress \
-    libvolumelistener
+    libvisualizer \
+    libvolumelistener \
+    sound_trigger.primary.holi
 
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration.xml \
@@ -129,7 +128,9 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service_64 \
     libcamera2ndk_vendor \
+    libexif.vendor:64 \
     libgui_vendor \
+    libyuv.vendor:64 \
     vendor.qti.hardware.camera.postproc@1.0.vendor
 
 # Dalvik heap
@@ -256,6 +257,8 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video_le.xml
 
 PRODUCT_PACKAGES += \
+    android.hardware.media.omx@1.0-service \
+    libstagefright_omx.vendor \
     libavservices_minijail \
     libavservices_minijail.vendor \
     libcodec2_hidl@1.0.vendor
@@ -287,7 +290,7 @@ PRODUCT_PACKAGES += \
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
 
-# Overlay - Runtime Resource Overlays 
+# Overlay - Runtime Resource Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
 # Partitions
@@ -408,6 +411,7 @@ PRODUCT_PACKAGES += \
     init.qti.kernel.debug.sh \
     init.qti.kernel.sh \
     init.qti.qcv.sh \
+    vendor_modprobe.sh \
     fstab.qcom \
     init.mmi.charge_only.rc \
     init.mmi.chipset.rc \
@@ -451,6 +455,7 @@ PRODUCT_PACKAGES += \
     extphonelib-product \
     extphonelib.xml \
     extphonelib_product.xml \
+    MotoNrEnabler \
     ims-ext-common \
     ims_ext_common.xml \
     qti-telephony-hidl-wrapper \
@@ -518,11 +523,16 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini \
     $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
 
+PRODUCT_VENDOR_MOVE_ENABLED := true
+
 # WiFi Display
 PRODUCT_PACKAGES += \
     libnl \
     libpng.vendor \
     libwfdaac_vendor
+
+PRODUCT_BOOT_JARS += \
+    WfdCommon
 
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/motorola/sm6375-common/sm6375-common-vendor.mk)
