@@ -134,6 +134,7 @@ $(WIFI_FIRMWARE_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	$(hide) ln -sf /vendor/etc/wifi/WCNSS_qcom_cfg.ini $@/WCNSS_qcom_cfg.ini
 	$(hide) ln -sf /mnt/vendor/persist/wlan_mac.bin $@/wlan_mac.bin
 
+
 ALL_DEFAULT_INSTALLED_MODULES += $(WIFI_FIRMWARE_SYMLINKS)
 
 CNE_APP_SYMLINKS := $(TARGET_OUT_VENDOR)/app/CneApp/lib/arm64
