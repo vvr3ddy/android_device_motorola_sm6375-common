@@ -524,7 +524,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
 
 PRODUCT_PACKAGES += \
-    WifiResCommonOverlay
+    WifiResCommonOverlay \
+    WifiResTarget
 
 PRODUCT_VENDOR_MOVE_ENABLED := true
 

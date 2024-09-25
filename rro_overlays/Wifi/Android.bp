@@ -1,0 +1,6 @@
+runtime_resource_overlay {
+    name: "WifiResTarget",
+    theme: "WifiResTarget",
+    sdk_version: "current",
+    vendor: true,
+}
