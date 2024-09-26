@@ -127,6 +127,7 @@ PRODUCT_PACKAGES_DEBUG += \
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service_64 \
+    libutilscallstack.vendor \
     libcamera2ndk_vendor \
     libexif.vendor:64 \
     libgui_vendor \
